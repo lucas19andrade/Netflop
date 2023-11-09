@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import Card from './components/card'
+import Titulo from './components/titulo'
 
 export default function Home() {
   return (
   
-           <main clasName="flex min-h-screen flex-col items-center justify-between ">
+           <main clasName="flex min-h-screen flex-col  ">
             <nav className="flex gap-4 justify-between items-end bg-gray-100 w-full	 p-3">
             <h1 className='flex items-center gap-2 text-5x1 text-amber-400 font-bold y uppercase'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-12">
@@ -15,6 +17,18 @@ export default function Home() {
 
            <a href ="/sobre">Sobre</a>
         </nav>
+          
+            <Titulo>Os Filmes mais flopados</Titulo>
+               <section className='flex flex-wrap gap-4 p-4'>
+                  <Card titulo="As marvels" nota ={10}/>
+                  <Card titulo="Harry potter" nota ={10} />
+                  <Card />
+                  <Card />
+              </section>
+
+            <Titulo> series em alta</Titulo>
+            <Titulo> lançamentos</Titulo>
+            <Titulo/>
     </main>
   )
 }
